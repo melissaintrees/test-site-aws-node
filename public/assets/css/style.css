@@ -1,0 +1,149 @@
+body {
+  background-color: #FFF4C9;
+  background-image: url("../img/wood_pattern_@2X.png")
+}
+
+.jumbotron {
+  background-color: #C7E78B;
+  opacity: .8;
+  padding: 0;
+}
+
+.vbtxt {
+  font-size: 9em;
+  text-align: center;
+  color: #FFF4C9;
+}
+
+.lead {
+  font-size: 36px;
+  -webkit-text-stroke: 0px;
+  display: inline-block;
+  color: #81AE64;
+}
+
+.form-group {
+  display: inline;
+}
+
+.submitveggie {
+  text-align: center;
+}
+
+.opt-txt {
+  color: #709053;
+  font-weight: 600;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 1.25em;
+}
+
+.col-md-6 {
+  background-color: #FFF4C9;
+  opacity: .8;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-head {
+  color:#FFF4C9;
+  text-transform: uppercase;
+}
+
+.card {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #C7E78B;
+}
+
+.card-header {
+  background-color: #81AE64;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+.card-body{
+  background-color: #FFF4C9;
+}
+
+.submitveggie {
+  background-color: #FFF4C9;
+  background-opacity: .6;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 65px;
+ /* Vertically center the text there */
+  background-color: #709053;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 672px) {
+
+.jumbotron {
+  margin-bottom:10px;
+}
+
+.vbtxt {
+  font-size: 3.5em;
+  margin-bottom: -20px;
+}
+
+.lead {
+  font-size: .3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.opt-txt {
+  font-size: 1em;
+  margin-top: -15px;
+}
+
+}
+
+@media only screen and (max-width: 575px) {
+
+.jumbotron {
+  margin-bottom:0px;
+}
+
+.col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.card-header {
+  font-size: 16px;
+  padding: .25rem .75rem;
+}
+.card-body {
+  padding: .75rem;
+}
+footer {
+  height: 90px;
+}
+.opt-txt {
+  display: none;
+}
+}

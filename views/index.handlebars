@@ -1,0 +1,66 @@
+
+<div class="jumbotron text-white rounded bg-dark">
+
+  <h1 class="display-4 vbtxt">VEGGIE<span class="lead">burger bar</p></h1>
+      <div class="submitveggie">
+        <hr class="my-4">
+        <h3 class="opt-txt">Make Selection From Below Or</h3>
+        <form class="create-form" action="/" method="POST">
+          <div class="form-group" >
+            <label for="vb_id"></label>
+            <input type="text" id="vb_id" name="name" placeholder="Add to Menu Here" required/>
+          </div>
+          <button type="submit" class="btn btn-secondary mb-2">Submit</button>
+        </form>
+      </div>
+
+</div>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+
+    <div class="col-md-6 bg-dark">
+      <h2 class="menu-head">ORDER IT:</h2>
+        {{#each tabletest}}
+          {{#if this.testbool}}
+            <div class="card text-center" style="width: 18rem;">
+            <div class="card-header">{{this.test_name}}</div>
+              <div class="card-body">
+                <form action="/{{this.id}}?_method=POST" method="POST">
+                  <input type="hidden" name="testbool" value="false">
+                  <button type="submit" class="order-again btn btn-secondary">Order it!</button>
+                </form>
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+    </div>
+
+    <div class="col-md-6">
+      <h2 class="menu-head text-dark">EAT IT:</h2>
+        {{#each tabletest}}
+          {{#unless this.testbool}}
+            <div class="card text-center" style="width: 18rem;">
+            <div class="card-header">{{this.test_name}}</div>
+              <div class="card-body bg-dark">
+                <form action="/{{this.id}}?_method=POST" method="POST">
+                  <input type="hidden" name="testbool" value="true">
+                  <button type="submit" class="devour btn btn-outline-light">Eat it!</button>
+                </form>
+              </div>
+            </div>
+          {{/unless}}
+        {{/each}}
+
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+  <br>
+    <p class="text-dark">Made by Melissa St Moore</p>
+  </div>
+</footer>
