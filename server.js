@@ -1,8 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var methodOverride = require('method-override');
-
 var port = process.env.PORT || 3200;
 console.log("connected to server on port: " + port);
 
@@ -25,5 +23,7 @@ var routes = require("./controllers/veggieburgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port);
 
+var server = app.listen(port, function () {
+    console.log('Server running at http://127.0.0.1:' + port + '/');
+});

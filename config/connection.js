@@ -4,8 +4,8 @@ let connection;
 
 require('dotenv').config();
 
-if (process.env.JAWSDB_URL){
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
+if (process.env.RDS_CONNECTION_URL){
+  connection = mysql.createConnection(process.env.RDS_CONNECTION_URL);
 } else {
   connection = mysql.createConnection({
     host: "localhost",
